@@ -1,4 +1,4 @@
-import { resultReducer as reducer, getResultsFromAPI, updateMeta, updateData } from '../../feature/result';
+import { resultReducer as reducer, updateMeta, updateData } from '../../feature/result';
 import { mockData } from '../../resources/mock_data';
 import { ResultState  } from '../../resources/types';
 

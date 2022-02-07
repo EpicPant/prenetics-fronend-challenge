@@ -9,7 +9,7 @@ export const organisationSlice = createSlice({
     name: 'organisation',
     initialState,
     reducers: {
-        switchOrganisation: (state, action: PayloadAction<string>) => {
+        switchOrganisation: (state) => {
             state.name === 'Circle' ? state.name = 'Prenetics' : state.name = 'Circle';
         }
     }
