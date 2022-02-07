@@ -1,0 +1,28 @@
+#pagination {
+    margin-left: 10px;
+}
+
+#pagination ul {
+    list-style: none;
+    display: flex;
+    background: #fff;
+    border-radius: 10px;
+}
+
+#pagination ul li {
+    padding: 1rem .5rem;
+}
+
+#pagination ul li a {
+    padding: .5rem;
+    transition: border-bottom 100ms ease;
+}
+
+#pagination ul li:hover > a {
+    cursor: pointer;
+    border-bottom: 1.5px solid var(--light-green);
+}
+
+#pagination ul li.active a {
+    border-bottom: 1.5px solid var(--light-green);
+}

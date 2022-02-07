@@ -1,0 +1,40 @@
+div#content-card {
+    background-color: #fff;
+    margin: 2rem 3rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+#table-footer {
+    margin: 0 3rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#table-wrapper {
+    max-height: 600px;
+    padding: 0;
+    margin: 1rem;
+    overflow: scroll;
+    position: relative;
+}
+
+#table-wrapper table {
+    text-align: left;
+    border-collapse: collapse;
+}
+
+#table-wrapper thead {
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    color: var(--light-gray);
+    background-color: #fff;
+}
+
+table th, table td {
+    padding: .6rem 2rem .6rem 0;
+}
