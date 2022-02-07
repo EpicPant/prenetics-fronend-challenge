@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getResultsFromAPI, updateMeta } from '../feature/result';
 import { SearchInputGroup } from './SearchInputGroup';
-import { ResultTableRow } from './ResultTableRow';
+import { CircleResultTableRow, ResultTableRow } from './ResultTableRow';
 import { Pagination } from './Pagination';
 import { TotalResultFound } from './TotalResultFound';
 import { RootState } from '../store';
@@ -11,7 +11,7 @@ import { updateTotalPage } from '../feature/pagination';
 
 export const TestResultPage = () => {
     const dispatch = useDispatch();
-    const { pagination, result, search } = useSelector((state: RootState) => state);
+    const { pagination, result, search, organisation } = useSelector((state: RootState) => state);
     const { query } = search;
     const { data, meta, status } = result;
     const { current_page, limit } = pagination;
@@ -43,6 +43,7 @@ export const TestResultPage = () => {
                                 <th>Barcode</th>
                                 <th>Activation</th>
                                 <th>Report Released</th>
+                                { organisation.name !== 'Circle' || <th>Result Type</th> }
                                 <th>Rejection</th>
                                 <th>Name</th>
                                 <th>Result</th>
@@ -51,7 +52,7 @@ export const TestResultPage = () => {
 
                         <tbody>
                             { data.map((item, i) => (
-                                <ResultTableRow key={i} {...item} />
+                                organisation.name === 'Circle' ? <CircleResultTableRow key={i} {...item} /> : <ResultTableRow key={i} {...item} />
                             )) }
                         </tbody>
                     </table>
