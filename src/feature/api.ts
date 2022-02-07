@@ -3,7 +3,7 @@ import { RootState } from '../store';
 import { API_URL, ORGANISATION_ID } from '../resources/constants';
 import { ApiResponseType, ResultState } from '../resources/types';
 
-export const fetchResultsFormAPI = (state: RootState) => {
+export const fetchResultsFormAPI = async (state: RootState) => {
     let url = `${API_URL}/org/${ORGANISATION_ID}/sample?limit=${state.pagination.limit}&offset=${state.pagination.current_page - 1}&`;
     const params = new URLSearchParams();
 
@@ -15,9 +15,8 @@ export const fetchResultsFormAPI = (state: RootState) => {
     }
     
     url += params.toString();
-
-    return axios.get(url)
-    .then((res): ResultState => {
+    try {
+        const res = await axios.get(url)
         const { data, meta, included } = res.data as ApiResponseType;
         return {
             status: state.result.status,
@@ -35,8 +34,13 @@ export const fetchResultsFormAPI = (state: RootState) => {
                 total: meta.total
             }
         }
-    })
-    .catch((err) => {
-        console.log(err);
-    });
+    } catch {
+        return {
+            status: 'rejected',
+            data: [],
+            meta: {
+                total: 0
+            }
+        }
+    }
 };
