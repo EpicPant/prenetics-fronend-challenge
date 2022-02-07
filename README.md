@@ -1,6 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Frontend Chanllenge at https://github.com/Prenetics/engineering/blob/main/frontend.md
 
 ## Available Scripts
 
