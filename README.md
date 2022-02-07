@@ -1,4 +1,9 @@
-# Frontend Chanllenge at https://github.com/Prenetics/engineering/blob/main/frontend.md
+# Prenetics Frontend Chanllenge - James Yip
+Prenetics Fromend Challenge Assigment from: https://github.com/Prenetics/engineering/blob/main/frontend.md
+
+## TODO
+Table.test.tsx - need to implement jest mock function to the actual api call
+(Now in the test file, jest is making a real api request to localhost:8080 to test if <ResultTableRow /> is rendered properly)
 
 ## Available Scripts
 
