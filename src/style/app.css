@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    --dark-green: rgb(45, 73, 35);
+    --green: rgb(109, 174, 85);
+    --light-green: rgb(86, 137, 67);
+    --light-gray: rgb(176, 176, 176);
+    --dark-gray: rgb(100, 100, 100);
+    --off-white: rgb(240, 240, 240);
+
+    background-color: var(--off-white);
+}
+
+.App {
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow: scroll;
+}
+
+#content {
+    display: flex;
+}
+
+#content-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    margin-left: 250px;
+    margin-top: 60px;
+    width: calc(100% - 250px);
+}
