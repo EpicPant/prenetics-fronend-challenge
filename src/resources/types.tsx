@@ -17,6 +17,10 @@ export interface ResultState {
     data: ResultType[]
 }
 
+export interface OrganisationState {
+    name: string;
+}
+
 export interface ResultType {
     result: string;
     activationTime: string;
