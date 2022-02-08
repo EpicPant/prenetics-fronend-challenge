@@ -5,6 +5,8 @@ Prenetics Fromend Challenge Assigment from: https://github.com/Prenetics/enginee
 - [ x ] Table.test.tsx - need to implement jest mock function to the actual api call
 (Now in the test file, jest is making a real api request to localhost:8080 to test if <ResultTableRow /> is rendered properly)
 
+- [ ] Table.test.tsx - didn't test if the component is showing the correct TableRow component for different organisation
+
 ## Available Scripts
 
 In the project directory, you can run:
