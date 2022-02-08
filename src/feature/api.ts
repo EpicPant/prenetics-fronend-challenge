@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { RootState } from '../store';
 import { API_URL, ORGANISATION_ID } from '../resources/constants';
-import { ApiResponseType, ResultState } from '../resources/types';
+import { ApiResponseType } from '../resources/types';
 
 export const fetchResultsFormAPI = async (state: RootState) => {
     let url = `${API_URL}/org/${ORGANISATION_ID}/sample?limit=${state.pagination.limit}&offset=${state.pagination.current_page - 1}&`;
